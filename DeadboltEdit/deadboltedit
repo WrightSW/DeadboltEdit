@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# DeadboltEdit - Run DeadboltEdit
+#
+#
+#
+
+#APP_DIR=`dirname "$0"`/..
+APP_DIR=`dirname "$0"`
+export APP_DIR
+
+SYSTYPE=`uname`
+case ${SYSTYPE} in
+    "Darwin"|"darwin")
+        # Mac
+        java -Dapple.awt.antialiasing=true \
+           -Xdock:name=DeadboltEdit \
+           -Xdock:icon=${APP_DIR}/icons/DeadboltEdit.icns \
+           -Dapple.laf.useScreenMenuBar=true \
+           -jar ${APP_DIR}/DeadboltEdit.jar $@
+        continue;;
+    *)
+        # Linux/Unix
+        java -jar ${APP_DIR}/DeadboltEdit.jar $@
+esac
+

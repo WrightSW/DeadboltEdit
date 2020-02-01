@@ -1,0 +1,65 @@
+              DeadboltEdit Licensing and Legal Information
+
+DeadboltEdit is made available subject to the terms of the Mozilla
+Public License, version 2.0. You should have received a copy of the MPL
+Version 2 along with this program; if not, you can obtain one at
+http://mozilla.org/MPL/2.0/.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Mozilla
+Public License for more details.
+
+DeadboltEdit  (http://www.deadboltedit.org)
+Copyright (C) 2012-2018   Michael Wright   All Rights Reserved
+
+DeadboltEdit logo and icon
+Copyright (C) 2012-2018   Michael Wright   All Rights Reserved
+
+Third Party Code additional copyright notices and license terms
+applicable to portions of the Software can be found below in this
+document.
+
+All trademarks and registered trademarks mentioned herein are the
+property of their respective owners.
+
+
+Third-Party Software
+--------------------
+DeadboltEdit uses the Not-Yet-Commons-SSL library, which is licensed
+under the Apache Software License 2.0. Please refer to
+http://www.apache.org/licenses.
+
+The PKCS12 key derivation function (included in Not-Yet-Commons-SSL
+library) was developed by BouncyCastle (bouncycastle.org).
+
+Some of the not-yet-commons-ssl software was originally developed by
+Credit Union Central of British Columbia (http://www.cucbc.com/). The
+CUCBC code was licensed to the Apache Software Foundation on August
+23rd, 2006.
+
+DeadboltEdit uses icon image files from the FamFamFam Silk icon set
+(http://www.famfamfam.com/lab/icons/silk/), which are licensed for use
+under the Creative Commons Attribution 2.5 License. Please refer to
+http://creativecommons.org/licenses/by/2.5/
+
+DeadboltEdit uses and includes the JFontChooser Java class, which is
+licensed under the terms the MIT open source license agreement included
+with JFontChooser. Please refer to
+http://sourceforge.jp/projects/jfontchooser/scm/svn/blobs/
+head/JFontChooser/trunk/jfontchooser/LICENSE.txt
+
+For DeadboltEdit binary distribution: The DeadboltEdit binary
+distribution is bundled with the OpenJDK Java Runtime Environment (Java
+JRE), which is included under the terms of the GNU General Public
+License (GPL), Version 2. The GPL V2 License applies to files located at
+subdirectory "jre" in the program installation directory. Use or
+redistribution of the DeadboltEdit binary distribution is subject to the
+terms of the GPL V2 License. A copy of the GPL V2 should be included
+with the binary distribution. If not, please refer to
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+
+Additional Third Party Licenses apply to the OpenJDK Java Runtime
+Environment (JRE). Please refer to file "THIRD_PARTY_README" included
+with the JRE binary distribution.
+

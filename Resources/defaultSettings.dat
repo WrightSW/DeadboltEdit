@@ -1,0 +1,18 @@
+# Default Settings
+#
+text.color=-16777216
+background.color=-1
+text.font.name=Monospaced
+text.font.style=0
+text.font.size=12
+tab.size=8
+# line.wrap: disable(0) / enable(1)
+line.wrap.enable=0
+#
+# debug.log: disable(0) / enable(1)
+debug.log.enable=0
+#
+# window.style:  System / Metal
+window.style=System
+#
+license.accepted=false
