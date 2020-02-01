@@ -1,4 +1,4 @@
-![DeadboltEdit Logo](images/DBE_Logo_Large.png)
+![DeadboltEdit Logo](https://www.deadboltedit.org/Images/DBE_Logo_Large.png)
 
 DeadboltEdit is a secure encrypting text editor for Mac OS X™, Windows™, and Linux™.
 
