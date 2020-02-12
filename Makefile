@@ -62,8 +62,8 @@ endif
 	chmod 755 DeadboltEdit/DeadboltEdit.jar
 	chmod 755 DeadboltEdit/deadboltedit
 	chmod 755 DeadboltEdit/deadboltedit.bat
-	cp License/NOTICE.txt DeadboltEdit
-	cp License/LICENSE.txt DeadboltEdit
+	cp NOTICE.txt DeadboltEdit
+	cp LICENSE.txt DeadboltEdit
 	chmod 755 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
 
 # Debug build
@@ -78,8 +78,8 @@ endif
 	chmod 755 DeadboltEdit/DeadboltEdit.jar
 	chmod 755 DeadboltEdit/deadboltedit
 	chmod 755 DeadboltEdit/deadboltedit.bat
-	cp License/NOTICE.txt DeadboltEdit
-	cp License/LICENSE.txt DeadboltEdit
+	cp NOTICE.txt DeadboltEdit
+	cp LICENSE.txt DeadboltEdit
 	chmod 755 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
 
 #
@@ -100,8 +100,8 @@ jar: classes/$(PKG)/*.class
 	chmod 755 DeadboltEdit/DeadboltEdit.jar
 	chmod 755 DeadboltEdit/deadboltedit
 	chmod 755 DeadboltEdit/deadboltedit.bat
-	cp License/NOTICE.txt DeadboltEdit
-	cp License/LICENSE.txt DeadboltEdit
+	cp NOTICE.txt DeadboltEdit
+	cp LICENSE.txt DeadboltEdit
 	chmod 755 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
 
 #
