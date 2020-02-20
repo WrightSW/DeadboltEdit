@@ -1,4 +1,4 @@
-# Automatically conver line endings
+# Automatically convert line endings
 * text=auto
 # Always use LF line endings on Bash scripts.  This avoids problems
 # with CygWin on Windows.
