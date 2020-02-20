@@ -1,6 +1,9 @@
-# Always use LF line endings on text files.  This avoids problems
+# Automatically conver line endings
+* text=auto
+# Always use LF line endings on Bash scripts.  This avoids problems
 # with CygWin on Windows.
-* text eol=lf
+DeadboltEdit/deadboltedit text eol=lf
+tools/* text eol=lf
 # Denote all files that are truly binary and should not be modified.
 *.png binary
 *.jpg binary
