@@ -168,5 +168,5 @@ MacOSXAppAdapterClass on Linux or Windows.
 
 
 
-Copyright (C) 2015-2016   ~~   Michael Wright  ~~   All Rights Reserved
+Copyright (C) 2015-2020   ~~   Michael Wright  ~~   All Rights Reserved
 
