@@ -1,6 +1,6 @@
 /*
  ****************************************************************************
- * Copyright (C) 2012-2018   Michael Wright   All Rights Reserved           *
+ * Copyright (C) 2012-2020   Michael Wright   All Rights Reserved           *
  *                                                                          *
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.            *
  *                                                                          *
@@ -1413,7 +1413,7 @@ public class DeadboltEdit extends JFrame implements DocumentListener, UndoableEd
     private void helpAbout() {
         String aboutMessage = "            DeadboltEdit\n\n" +
                               "   Version " + programVersion + " - " + runtimeSettings.getProperty("platform.desc") + "\n\n" +
-                              "Copyright 2012-2018   Michael Wright" + "\n\n" +
+                              "Copyright 2012-2020   Michael Wright" + "\n\n" +
                               "       //www.deadboltedit.org       ";
         java.net.URL iconURL =
             ClassLoader.getSystemClassLoader().getResource("Resources/images/DeadboltEdit48x48.png");
@@ -2232,7 +2232,7 @@ public class DeadboltEdit extends JFrame implements DocumentListener, UndoableEd
     static private Properties defaultSettings = null;
     static private Properties settings = null;
 
-    static final private String programVersion = "3.30";    // Program version
+    static final private String programVersion = "3.40";    // Program version
 
 
     public static void main(String args[]) {
