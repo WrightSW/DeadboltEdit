@@ -4,6 +4,7 @@
 # Always use LF line endings on Bash scripts.  This avoids problems
 # with CygWin on Windows.
 DeadboltEdit/deadboltedit text eol=lf
+DeadboltEdit/deadboltedit.bat text eol=crlf
 tools/* text eol=lf
 #
 # Denote all files that are binary and should not be modified.
@@ -11,6 +12,7 @@ tools/* text eol=lf
 *.jpg binary
 *.icns binary
 *.ico binary
+*.gif binary
 *.ctxt binary
 test/* binary
 #
