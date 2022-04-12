@@ -14,7 +14,7 @@ You will need:
 - A Java JDK for Java version 1.7 or greater (Java 7 JDK).
 
 - The Not-Yet-Commons-SSL library
-  http://juliusdavies.ca/commons-ssl/index.html
+  https://mvnrepository.com/artifact/ca.juliusdavies/not-yet-commons-ssl/0.3.17
 
 - GNU make utility
 
