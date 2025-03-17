@@ -64,7 +64,7 @@ endif
 	chmod 755 DeadboltEdit/deadboltedit.bat
 	cp NOTICE.txt DeadboltEdit
 	cp LICENSE.txt DeadboltEdit
-	chmod 755 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
+	chmod 644 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
 
 # Debug build
 debug: $(SOURCEDIR)/*.java $(RESOURCES) $(SOURCEDIR)/Manifestfile Makefile
@@ -80,7 +80,7 @@ endif
 	chmod 755 DeadboltEdit/deadboltedit.bat
 	cp NOTICE.txt DeadboltEdit
 	cp LICENSE.txt DeadboltEdit
-	chmod 755 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
+	chmod 644 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
 
 #
 #
@@ -102,7 +102,7 @@ jar: classes/$(PKG)/*.class
 	chmod 755 DeadboltEdit/deadboltedit.bat
 	cp NOTICE.txt DeadboltEdit
 	cp LICENSE.txt DeadboltEdit
-	chmod 755 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
+	chmod 644 DeadboltEdit/NOTICE.txt DeadboltEdit/LICENSE.txt
 
 #
 clean:

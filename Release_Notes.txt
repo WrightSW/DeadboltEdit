@@ -1,0 +1,207 @@
+                        DeadboltEdit Release Notes
+                        --------------------------
+
+System Requirements
+--------------------
+
+Windows:  Windows 7 or later.
+          Only 64-bit systems are supported.
+
+MacOS X:  Requires MacOSX 10.9 (Mavericks) or later.
+          Only 64-bit systems are supported.
+
+Linux:    Most major distributions, including Ubuntu, Debian,
+          Fedora, RHEL, CentOS, Mint
+          Only 64-bit versions are supported.
+
+
+Revision History
+--------------------
+V3.50  03-16-2025: 14th Production Release
+    - Improvements for high-resolution displays (high-DPI).
+      Improved window sizing and scaling.
+
+    - Toolbar icon scaling on hi-resolution displays.
+
+    - Updated runtime components which provide bug fixes and improved
+      support for newer operating systems.
+
+    - Improvements to intallers (Windows, Linux).
+
+    - Documentation updates.
+
+V3.40  03-06-2020: 13th Production Release
+    - Maintenance release (no new features)
+
+    - Updated runtime components which provide bug fixes and improved
+      support for newer operating systems.
+
+V3.30  07-14-2018: 12th Production Release
+    - Improved Horizontal scrolling for long text lines.  Window sizing will now
+      produce a consistently sized viewport.
+    
+    - Improved line-wrap for long text lines. New version breaks on word boundaries
+      to preserve words, and produces consistent results.
+    
+    - New item in "Settings" menu: Line-Wrap Enable.
+      When Enabled, long lines wrap to next line, and subsequent lines if needed.
+      When Disabled, a Horizontal scrollbar permits text scrolling.
+      
+    - Improved printing: Printed text has improved line-wrap for long lines of text.
+      
+    - Updated User Guide (accessible from program "Help" menu).
+
+V3.20  03-12-2018: 11th Production Release
+    - Improved printing. Now uses standard print dialog, and renders printed text
+      using same font-style and font-size selected for editor.
+    
+    - Updated runtime libraries to improve performance and compatibility
+      with newer operating systems.
+      
+    - Updated UserGuide (accessible from "Help" menu).
+    
+    - Updated license files.
+
+V3.10  09-04-2016: 10th Production Release
+    - Undo/Redo capability added to editor, available under Edit menu.
+    
+    - Updated UserGuide to add documentation for Undo & Redo.
+    
+    - Updated UserGuide to correct HTML errors.
+    
+    - WindowStyleDialog improved.  All dialogs under Settings Menu can now be
+      dismissed with Escape key.
+      
+    - Updated basic launcher script for MacOSX and Linux.
+    
+    - Minor code changes to improve stability and maintainability.
+    
+V3.00  03-11-2016: 9th Production Release
+    - Full UNICODE character support.  Should fully support the entire
+      character set on all keyboards.  This fixes a problem in previous
+      versions that causes some special characters to be stripped
+      when the file was saved.
+
+    - Added Right-click Edit Menu to the editor pane.
+      (Cut, Copy, Paste, Delete)
+
+    - Improved dialogs, most dialogs can now be dismissed with the
+      Esc key.
+
+    - Improved apearance on Mac OSX Retina Displays (updated runtime
+      libraries)
+
+    - Improved error handling for IO and encryption errors.
+
+    - Support for newer operating systems (updated Java Runtime Environment).
+
+    - License updated for OpenJDK Java Runtime Environment.
+
+V2.20  09-06-2015: 8th Production Release
+    - Added Tab Size setting to Settings menu.
+
+    - Implemented default button behavior in password creation dialog.
+
+    - Updates to User Guide.
+
+    - Minor change to Window Style dialog layout (Settings menu).
+
+    - Mac OS X version: Improved appearance on Retina Display.
+
+V2.10  01-17-2015: 7th Production Release
+    - Open source release, under Mozilla Public License 2.0.  New license
+      and notice files based on MPL 2.0.
+
+    - Restructured project for universal build; a single build for MacOSX,
+      Windows, and Linux.  Eliminated platform-specific conditional compiles.
+
+    - Bug fix: Intermittent problem on MacOSX when launching app by file
+      open event (double-clicking a *.ctxt file).  Problem was caused by
+      a race condition.
+
+    - Improvements in log messages (debug log).
+
+    - Added hyperlink capability to license viewer (an HTML viewer).
+      This was done to accomodate a more complex license file with
+      navigation links.
+
+V1.60  08-16-2014: 6th Production Release
+    - Added Find and Find/Replace dialogs.  Find, Find Next, and Find/Replace
+      are accessible from the "Edit" manu.
+
+    - Added an icon to toolbar for the Find dialog.
+
+    - Password Dialog: Added default button behavior.
+
+    - Expanded platform description in "About Dialog" (Help - About).
+
+    - Bug Fix: New windows were not inheriting the current active directory
+      if it had changed after program startup.
+
+    - Additions and improvements to User Guide (Help -> User Guide).
+
+V1.50  04-02-2014: 5th Production Release
+    - First release of Linux version.
+
+    - Several changes and improvements to handle invalid directory, which is
+      returned in some cases by the File Chooser Dialog on Linux. (This is
+      a known issue)
+
+    - Updated User Guide.
+
+    - Installation files and scripts for Linux.
+
+    - Active Directory from file chooser activity is now saved with
+      settings, for persistence between executions of the program. This
+      gives a more consistent behavior across platforms.
+
+V1.40  03-13-2014: Fourth Production Release
+    - Ported to Linux. Minor changes to optimize for Linux environment.
+      File Open Dialog on Linux will show files under "Recent Files" which may
+      have in fact been deleted or moved, so improved checking and error handling
+      for this case.
+
+    - Improvements to Help Viewer.
+
+    - Minor enhancements for stability and error handling.
+
+V1.30  09-29-2013: Third Production Release
+    - Add keyboard shortcuts for menu functions "File -> Open Plain Text File" and
+      "File -> Save Plain Text File".
+
+    - Improved reporting of unsaved editor events.
+
+    - Improved handling and reporting of errors (eg. IO errors, encryption errors).
+
+    - Improved the "Password Change" function (in File Menu) to simplify the process
+      for the user. The file will always be re-encrypted using the new password, and
+      saved.  User will have two opportunities to cancel the password change prior to
+      saving the file.
+
+    - Updated User Guide.
+
+V1.20  08-08-2013: Second Production Release
+    - Added toolbar to editor window.
+
+    - Updated End User License Agreement and NOTICE.txt files to add credits for the
+      FamFamFam Silk Icon set used in the toolbar.
+
+    - Bug fix: The bug fix removes all non-ASCII characters from the edit buffer prior
+      to encryption.
+
+      Prior to the bug fix it was possible to copy and paste special characters into
+      the edit buffer that did not have an ASCII representation.  These characters
+      caused checksum errors during decryption.
+
+   - Status Line: Add a second text field to status line for edit status.
+
+   - When text in the editor has been modified, indicate a modified state by showing
+     an asterisk before the program name in the title of the window.  Prior to this
+     update, the asterisk appeared after the program name but before the filename.
+
+   - Update User Guide for new toolbar and updated status line.
+
+   - Several minor coding improvements for performance and stability.
+
+V1.08  06-14-2013: First Production Release
+

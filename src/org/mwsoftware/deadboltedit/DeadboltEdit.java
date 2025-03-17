@@ -1,6 +1,6 @@
 /*
  ****************************************************************************
- * Copyright (C) 2012-2020   Michael Wright   All Rights Reserved           *
+ * Copyright (C) 2012-2025   Michael Wright   All Rights Reserved           *
  *                                                                          *
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.            *
  *                                                                          *
@@ -29,8 +29,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.text.*;   // Document, PlainDocument
-
-import java.awt.FileDialog;
 import javax.swing.event.*;  //DocumentListener interface, DocumentEvent
 import java.io.*;
 import java.util.*;     // ex. java.util.Arrays.fill()
@@ -82,27 +80,36 @@ public class DeadboltEdit extends JFrame implements DocumentListener, UndoableEd
         }
         //
         // Set toolbar button icons from resources in jar file
+        //
+        // Scale factor for toolbar icons: We can't get reliable pixels/inch, so this is 
+        // a (crude) attempt to make a rough estimate based on screen height in pixels.
+        // Alternately, a hard-coded value of 1.5 works reasonably well.
+        double iconScaleFactor = Toolkit.getDefaultToolkit().getScreenSize().getHeight() / 1000.0;
+        if (iconScaleFactor > 2.2) iconScaleFactor = 2.2;
+        if (iconScaleFactor < 1.0) iconScaleFactor = 1.0;
+        //
         java.net.URL iconURL;
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/new-win.png");
-        toolbarNew.setIcon(new ImageIcon(iconURL));
+        //toolbarNew.setIcon(new ImageIcon(iconURL));   // Use this for unscaled icon
+        toolbarNew.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));  // Our ScaledImageIcon class
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/open.png");
-        toolbarOpen.setIcon(new ImageIcon(iconURL));
+        toolbarOpen.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/save.png");
-        toolbarSave.setIcon(new ImageIcon(iconURL));
+        toolbarSave.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/close.png");
-        toolbarClose.setIcon(new ImageIcon(iconURL));
+        toolbarClose.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/printer.png");
-        toolbarPrint.setIcon(new ImageIcon(iconURL));
+        toolbarPrint.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/cut_red.png");
-        toolbarCut.setIcon(new ImageIcon(iconURL));
+        toolbarCut.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/copy.png");
-        toolbarCopy.setIcon(new ImageIcon(iconURL));
+        toolbarCopy.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/paste.png");
-        toolbarPaste.setIcon(new ImageIcon(iconURL));
+        toolbarPaste.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/find.png");
-        toolbarFind.setIcon(new ImageIcon(iconURL));
+        toolbarFind.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         iconURL = ClassLoader.getSystemClassLoader().getResource("Resources/images/Silk16x16/help.png");
-        toolbarHelp.setIcon(new ImageIcon(iconURL));
+        toolbarHelp.setIcon(new ScaledImageIcon(iconURL, iconScaleFactor));
         //
         // Add our DocumentListener to the editor.  This signals edit changes
         editorPane.getDocument().addDocumentListener(this);
@@ -137,9 +144,23 @@ public class DeadboltEdit extends JFrame implements DocumentListener, UndoableEd
             Rectangle winDimensions = new Rectangle(x, y, w, h);
             this.setBounds( winDimensions );
         }
+        // If we have a saved preferred window size
         else {
-            this.setSize(600, 500);
-            setLocationRelativeTo(getOwner());
+            if( settings.containsKey("window.last.Height") ) {
+                int h = Integer.parseInt( settings.getProperty("window.last.Height") );
+                int w = Integer.parseInt( settings.getProperty("window.last.Width") );
+                this.setSize(w, h);
+                setLocationRelativeTo(getOwner());    
+            }
+            // We don't have a preferred window size yet, make window 1/3w x 1/2h screen size.
+            else {
+                Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                int w = (int) screenSize.getWidth() / 3;
+                int h = (int) screenSize.getHeight() / 2;
+                this.setSize(w, h);
+                //this.setSize(600, 500);
+                setLocationRelativeTo(getOwner());
+            }
         }
         applySettings();
         fileStatusField.setText("");
@@ -1413,7 +1434,7 @@ public class DeadboltEdit extends JFrame implements DocumentListener, UndoableEd
     private void helpAbout() {
         String aboutMessage = "            DeadboltEdit\n\n" +
                               "   Version " + programVersion + " - " + runtimeSettings.getProperty("platform.desc") + "\n\n" +
-                              "Copyright 2012-2020   Michael Wright" + "\n\n" +
+                              "Copyright 2012-2025   Michael Wright" + "\n\n" +
                               "       //www.deadboltedit.org       ";
         java.net.URL iconURL =
             ClassLoader.getSystemClassLoader().getResource("Resources/images/DeadboltEdit48x48.png");
@@ -2232,7 +2253,7 @@ public class DeadboltEdit extends JFrame implements DocumentListener, UndoableEd
     static private Properties defaultSettings = null;
     static private Properties settings = null;
 
-    static final private String programVersion = "3.40";    // Program version
+    static final private String programVersion = "3.50";    // Program version
 
 
     public static void main(String args[]) {
